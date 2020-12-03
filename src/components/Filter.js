@@ -9,17 +9,17 @@ import classNames from "classnames";
 const useStyles = makeStyles((theme) => ({
   tileContainer: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "center"
   },
   tileButton: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(1)
   },
   checked: {
     backgroundColor: "green",
     "&:hover": {
-      backgroundColor: "darkgreen",
-    },
-  },
+      backgroundColor: "darkgreen"
+    }
+  }
 }));
 
 function Filter({ handleFilterChange }) {
@@ -49,7 +49,7 @@ function Filter({ handleFilterChange }) {
                 <Grid className={classes.tileContainer} item xs={6} sm={6}>
                   <Button
                     className={classNames(classes.tileButton, {
-                      [classes.checked]: item === state.year,
+                      [classes.checked]: item === state.year
                     })}
                     key={item}
                     variant="contained"
@@ -79,7 +79,7 @@ function Filter({ handleFilterChange }) {
                 <Grid className={classes.tileContainer} item xs={6} sm={6}>
                   <Button
                     className={classNames(classes.tileButton, {
-                      [classes.checked]: item === state.sLaunch,
+                      [classes.checked]: item === state.sLaunch
                     })}
                     key={item}
                     variant="contained"
@@ -110,7 +110,7 @@ function Filter({ handleFilterChange }) {
                 <Grid className={classes.tileContainer} item xs={6} sm={6}>
                   <Button
                     className={classNames(classes.tileButton, {
-                      [classes.checked]: item === state.sLand,
+                      [classes.checked]: item === state.sLand
                     })}
                     key={item}
                     variant="contained"
@@ -133,6 +133,8 @@ function Filter({ handleFilterChange }) {
   );
 }
 
-Filter.propTypes = {};
+Filter.propTypes = {
+  handleFilterChange: PropTypes.func
+};
 
 export default Filter;

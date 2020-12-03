@@ -56,6 +56,8 @@ function CardContainer({ launches }) {
   );
 }
 
-CardContainer.propTypes = {};
+CardContainer.propTypes = {
+  launches: PropTypes.array.isRequired
+};
 
 export default CardContainer;
