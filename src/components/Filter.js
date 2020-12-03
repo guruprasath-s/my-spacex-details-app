@@ -44,9 +44,15 @@ function Filter({ handleFilterChange }) {
             ----------
           </Typography>
           <Grid container spacing={1}>
-            {rangeOfYears(2006, 2020).map((item) => {
+            {rangeOfYears(2006, 2020).map((item, i) => {
               return (
-                <Grid className={classes.tileContainer} item xs={6} sm={6}>
+                <Grid
+                  key={i}
+                  className={classes.tileContainer}
+                  item
+                  xs={6}
+                  sm={6}
+                >
                   <Button
                     className={classNames(classes.tileButton, {
                       [classes.checked]: item === state.year
@@ -74,9 +80,15 @@ function Filter({ handleFilterChange }) {
             ----------
           </Typography>
           <Grid container spacing={1}>
-            {["True", "False"].map((item) => {
+            {["True", "False"].map((item, i) => {
               return (
-                <Grid className={classes.tileContainer} item xs={6} sm={6}>
+                <Grid
+                  key={i}
+                  className={classes.tileContainer}
+                  item
+                  xs={6}
+                  sm={6}
+                >
                   <Button
                     className={classNames(classes.tileButton, {
                       [classes.checked]: item === state.sLaunch
@@ -105,9 +117,15 @@ function Filter({ handleFilterChange }) {
             ----------
           </Typography>
           <Grid container spacing={1}>
-            {["True", "False"].map((item) => {
+            {["True", "False"].map((item, i) => {
               return (
-                <Grid className={classes.tileContainer} item xs={6} sm={6}>
+                <Grid
+                  key={i}
+                  className={classes.tileContainer}
+                  item
+                  xs={6}
+                  sm={6}
+                >
                   <Button
                     className={classNames(classes.tileButton, {
                       [classes.checked]: item === state.sLand

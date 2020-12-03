@@ -21,9 +21,9 @@ function CardContainer({ launches }) {
   return (
     <Grid container spacing={2}>
       {launches.length > 0 &&
-        launches.map((launch) => {
+        launches.map((launch, i) => {
           return (
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid item key={i} xs={12} sm={6} lg={3}>
               <Card classes={{ root: classes.paper }}>
                 <CardContent>
                   <img
@@ -33,6 +33,14 @@ function CardContainer({ launches }) {
                   />
                   <Typography variant="h6" color="primary">
                     {launch.mission_name}
+                  </Typography>
+                  <Typography component="p">
+                    <b>Mission ID's: </b>
+                    <ul>
+                      {launch.mission_id.map((id) => (
+                        <li key={id}>{id}</li>
+                      ))}
+                    </ul>
                   </Typography>
                   <Typography component="p">
                     <b>Launching Year:</b> {launch.launch_year}
