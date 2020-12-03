@@ -9,7 +9,7 @@ import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles((theme) => ({
   img: {
     width: "100%",
-    height: "330px"
+    height: "250px"
   },
   paper: {
     height: "100%"
