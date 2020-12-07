@@ -64,7 +64,7 @@ function App() {
       <div className={classes.app}>
         <AppBar position="static">
           <Toolbar className={classes.toolBar}>
-            <Typography variant="h5" className={classes.title}>
+            <Typography variant="h6" className={classes.title}>
               SpaceX Launch Program
             </Typography>
           </Toolbar>
