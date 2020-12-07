@@ -5,6 +5,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const useStyles = makeStyles((theme) => ({
   img: {
@@ -26,10 +27,17 @@ function CardContainer({ launches }) {
             <Grid item key={i} xs={12} sm={6} lg={3}>
               <Card classes={{ root: classes.paper }}>
                 <CardContent>
-                  <img
+                  {/*<img
                     className={classes.img}
                     src={launch.links.mission_patch}
                     alt="image_"
+                  />*/}
+                  <LazyLoadImage
+                    alt={"image_"}
+                    placeholderSrc={"https://via.placeholder.com/250"}
+                    height={"250px"}
+                    src={launch.links.mission_patch}
+                    width={"100%"}
                   />
                   <Typography variant="h6" color="primary">
                     {launch.mission_name}
